@@ -2,6 +2,14 @@ import React from 'react'
 import './featured.scss';
 import HouseCard from './HouseCard';
 import CompareCard from './CompareCard';
+import { compareData } from '../../../data/data';
+import FeaturedApartments from './FeaturedApartments';
+import { investmentData } from '../../../data/data';
+import { apartmentData } from '../../../data/data';
+import { rentData } from '../../../data/data';
+import InvestSingle from '../../house/InvestSingle';
+import BuySingle from '../../house/BuySingle';
+import RentSingle from '../../house/RentSingle';
 
 const Featured = () => {
     const houseData = [
@@ -18,52 +26,21 @@ const Featured = () => {
             title: 'Buy An Apartment'
         },
     ]
-    const compareData = [
-        {
-            id:1,
-            name: 'Sole-Ownership',
-            list_item: [
-                {
-                    heading: 'Choose a property',
-                    info: 'Browse and select any of our pre-vetted properties that matchyour investment appetite.'
-                },
-                {
-                    heading: 'Get financing approval',
-                    info: 'Apply for financing in 5mins and get approval in 24hrs. 5% of the downpayment is required as original fee, and it refundable if you are not approved.'
-                },
-                {
-                    heading: 'Complete documentation',
-                    info: 'Apply for financing in 5mins and get approval in 24hrs. 5% of the downpayment is required as original fee, and it refundable if you are not approved.'
-                },
-                {
-                    heading: 'Take ownership',
-                    info: 'Property title will be transferred to you once payback is completed. You can buyout/sell property'
-                },
-            ]
-        },
-        {
-            id:2,
-            name: 'Co-Ownership',
-            list_item: [
-                {
-                    heading: 'Choose a property',
-                    info: 'Browse and select any of our pre-vetted properties that matchyour investment appetite.'
-                },
-                {
-                    heading: 'Buy shares',
-                    info: 'Review all terms, sign documents and pay for your shares'
-                },
-                {
-                    heading: 'Get ownership ceertificate',
-                    info: 'Your share certificate is your right of ownership to the shares you bought.'
-                },
-                {
-                    heading: 'Earn income & appreciation',
-                    info: 'Earn your share of rent and watch your shares appreciate while we manage the property.'
-                },
-            ]
-        }
-    ]
+    const co_Own = {
+        title: 'Co-Own an Apartment',
+        link: 'invest-in-apartments',
+        subtitle: 'Start with what you have. Get annualized appreciation in 5 years. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
+    };
+    const buy = {
+        title: 'Buy an Apartment',
+        link: 'buy-an-apartment',
+        subtitle: 'Get a 6 years payback period and enjoy 10 years guaranteed rent. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
+    };
+    const rent = {
+        title: 'Rent an Apartment',
+        link: 'rent-an-apartment',
+        subtitle: 'Get a 6 years payback period and enjoy 10 years guaranteed rent. \nLorem ipsum dolor sit amet consectetur adipisicing elit. Illum, nulla? Facere in veritatis, reiciendis consequuntur eius adipisci eum amet, sit placeat voluptate vitae dignissimos iusto inventore illo! Magni, repellat quas'
+    };
   return (
     <div className='featured'>
         <div className="container">
@@ -81,6 +58,22 @@ const Featured = () => {
                     <CompareCard key={data.id} cardDetail={data}/>
                 ))}
             </div>
+            <h2 className="head-title">Featured Apartments</h2>
+            <FeaturedApartments featureApartment={co_Own}>
+                {investmentData.map((item) => (
+                    <InvestSingle key={item.id} investHouse={item}/>
+                ))}
+            </FeaturedApartments>
+            <FeaturedApartments featureApartment={buy}>
+                {apartmentData.map((item) => (
+                    <BuySingle key={item.id} buyHouse={item}/>
+                ))}
+            </FeaturedApartments>
+            <FeaturedApartments featureApartment={rent}>
+                {rentData.map((item) => (
+                    <RentSingle key={item.id} rentHouse={item}/>
+                ))}
+            </FeaturedApartments>
         </div>
     </div>
   )
