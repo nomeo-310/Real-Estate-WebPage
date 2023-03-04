@@ -1,0 +1,174 @@
+.featured {
+    padding: 90px 40px 50px 40px;
+    .head-title {
+        text-align: center;
+        font-size: 36px;
+        margin: 30px 0;
+    }
+    p {
+        text-align: center;
+        margin: 20px 0 30px 0;
+    }
+    .subtitle {
+        text-align: center;
+        font-weight: 400;
+        margin-top: -10px;
+    }
+    .house-card-wrapper {
+        width: 100%;
+        display: flex;
+        gap: 40px;
+        padding: 30px 60px;
+        margin: 50px 0 60px 0;
+        .house-card {
+            box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            .house-image {
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    &:hover {
+                        -webkit-transform: scale(1.1);
+                        -ms-transform: scale(1.1);
+                        transform: scale(1.1);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+            .card-details {
+                padding: 45px 20px 20px 20px;
+                text-align: center;
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 15px;
+                }
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    background: #9292eb;
+                    padding: 10px 20px;
+                    border-radius: 30px;
+                    color: #fff;
+                    font-size: 15px;
+                    &:hover {
+                        background: rgba(0, 0, 255, 1.0); 
+                    }
+                }
+            }
+
+        }
+    }
+    .compare {
+        display: flex;
+        gap: 40px;
+        margin: 30px 50px;
+        padding: 20px 30px;
+        border-radius: 9px;
+        color: #fff;
+        background: #9292eb;
+        .compare-card {
+            width: 100%;
+            .title {
+                text-align: center;
+                margin-bottom: 30px;
+                font-weight: 400;
+            }
+            .card-list {
+                li{
+                    position: relative;
+                    padding-left: 35px;
+                    h4 {
+                        font-weight: 400;
+                        font-size: 17px;
+                    }
+                    h4:not(:first-child) {
+                        margin: 5px 0;
+                        font-size: 14px;
+                    }
+                    &::before {
+                        position: absolute;
+                        top: 5px;
+                        left: 10px;
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 100%;
+                        background: #fff;
+                    }
+
+                }
+                li:not(:last-child){
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .featured {
+        padding: 60px 0 30px 0;
+        .head-title {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+        p {
+            text-align: justify;
+        }
+        .house-card-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 30px 0;
+            margin: 20px 0 30px 0;
+            .house-card {
+                .card-details {
+                    padding: 30px 25px 25px 15px;
+                    text-align: center;
+                    h3 {
+                        font-size: 20px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                    a {
+                        font-size: 14px;
+                    }
+                }
+    
+            }
+        }
+        .compare {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin: 25px 0;
+            padding: 20px;
+            .compare-card {
+                .title {
+                    margin-bottom: 18px;
+                }
+                .card-list {
+                    li{
+                        h4 {
+                            font-size: 16px;
+                        }
+                        h4:not(:first-child) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &:not(:first-child) {
+                    padding-top: 40px;
+                    border-top: 1px solid #fff;
+                }
+            }
+        }
+    } 
+}
