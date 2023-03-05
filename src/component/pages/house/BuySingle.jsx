@@ -20,7 +20,7 @@ const BuySingle = ({buyHouse: {image, name, type, status, down_payment, apartmen
                 <h4>{apartment_status}</h4>
             </div>
         </div>
-        <h3 className='property-price'>Property Price: <span className="mdi mdi-currency-ngn"></span>{price.toLocaleString()}</h3>
+        <h3 className='property-price'>Property Price: <span><span className="mdi mdi-currency-ngn"></span>{price.toLocaleString()}</span></h3>
         <h3 className='apartment-name'>{name}</h3>
         <ul className='apartment-details'>{apartment_details.map((detail, index) => (<li key={index}>{detail}</li>))}</ul>
         <ul className='footer'>

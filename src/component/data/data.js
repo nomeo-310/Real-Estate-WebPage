@@ -103,20 +103,20 @@ export const apartmentData = [
         appreciation: 23,
         apartment_details: ['2 bedrooms', '2 bathrooms', '45 sqm']
     },
-    // {
-    //     id: 4,
-    //     name: 'Smithsan Court, Block D, Oniru',
-    //     image: require('../pages/house/images/buy_1.jpg'),
-    //     type: '2 Bedrooms',
-    //     status: 'Ongoing',
-    //     down_payment: 16000000,
-    //     apartment_status: 'available',
-    //     price: 76000000,
-    //     rent: '4.3M',
-    //     returns: 21,
-    //     appreciation: 21,
-    //     apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
-    // },
+    {
+        id: 4,
+        name: 'Smithsan Court, Block D, Oniru',
+        image: require('../pages/house/images/buy_1.jpg'),
+        type: '2 Bedrooms',
+        status: 'Ongoing',
+        down_payment: 16000000,
+        apartment_status: 'available',
+        price: 76000000,
+        rent: '4.3M',
+        returns: 21,
+        appreciation: 21,
+        apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
+    },
 
 ];
 
@@ -166,22 +166,22 @@ export const investmentData = [
         remaining_shares: 15987,
         apartment_details: ['2 bedrooms', '2 bathrooms', '45 sqm']
     },
-    // {
-    //     id: 4,
-    //     name: 'Smithsan Court, Block D, Oniru',
-    //     image: require('../pages/house/images/buy_4.jpg'),
-    //     type: '2 Bedrooms',
-    //     status: 'Ongoing',
-    //     share_price: 4500,
-    //     down_payment: 16000000,
-    //     purchase_status: 'buy',
-    //     price: 76000000,
-    //     total_returns: 80,
-    //     hold_time: 5,
-    //     available_shares: 12750,
-    //     remaining_shares: 10987,
-    //     apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
-    // },
+    {
+        id: 4,
+        name: 'Smithsan Court, Block D, Oniru',
+        image: require('../pages/house/images/buy_4.jpg'),
+        type: '2 Bedrooms',
+        status: 'Ongoing',
+        share_price: 4500,
+        down_payment: 16000000,
+        purchase_status: 'buy',
+        price: 76000000,
+        total_returns: 80,
+        hold_time: 5,
+        available_shares: 12750,
+        remaining_shares: 10987,
+        apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
+    },
 
 ];
 
@@ -217,15 +217,15 @@ export const rentData = [
         apartment_status: 'available',
         apartment_details: ['2 bedrooms', '2 bathrooms', '45 sqm']
     },
-    // {
-    //     id: 4,
-    //     name: 'Smithsan Court, Block D, Oniru',
-    //     image: require('../pages/house/images/rent_4.jpg'),
-    //     type: '2 Bedrooms',
-    //     status: 'Ongoing',
-    //     rent: 2600000,
-    //     apartment_status: 'available',
-    //     apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
-    // },
+    {
+        id: 4,
+        name: 'Smithsan Court, Block D, Oniru',
+        image: require('../pages/house/images/rent_4.jpg'),
+        type: '2 Bedrooms',
+        status: 'Ongoing',
+        rent: 2600000,
+        apartment_status: 'available',
+        apartment_details: ['2 bedrooms', '2 bathrooms', '48 sqm']
+    },
 
 ];

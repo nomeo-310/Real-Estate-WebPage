@@ -60,7 +60,7 @@ useEffect(() => {
         </div>
         <div className={`nav-center ${className}`}>
           <div className="nav-list">
-            {navItems.map((navItem, index) => (<li className="nav-item" key={index}><NavLink to={navItem.path} className="nav-link">{navItem.name}</NavLink></li>))}
+            {navItems.map((navItem, index) => (<li className="nav-item" key={index} onClick={closeMenu}><NavLink to={navItem.path} className="nav-link">{navItem.name}</NavLink></li>))}
           </div>
         </div>
         <div className={`nav-right ${className}`}>

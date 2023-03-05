@@ -102,13 +102,7 @@
                 height: 100%;
                 width: 100%;
                 .slide-details {
-                    position: absolute;
-                    right: 15%;
-                    bottom: 40%;
-                    padding: 10px;
-                    h3 {
-                        font-size: 14px;
-                    }
+                    display: none;
                 }
             }
             .slide::after {

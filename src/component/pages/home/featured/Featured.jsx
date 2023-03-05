@@ -60,17 +60,17 @@ const Featured = () => {
             </div>
             <h2 className="head-title">Featured Apartments</h2>
             <FeaturedApartments featureApartment={co_Own}>
-                {investmentData.map((item) => (
+                {investmentData.slice(0,3).map((item) => (
                     <InvestSingle key={item.id} investHouse={item}/>
                 ))}
             </FeaturedApartments>
             <FeaturedApartments featureApartment={buy}>
-                {apartmentData.map((item) => (
+                {apartmentData.slice(0,3).map((item) => (
                     <BuySingle key={item.id} buyHouse={item}/>
                 ))}
             </FeaturedApartments>
             <FeaturedApartments featureApartment={rent}>
-                {rentData.map((item) => (
+                {rentData.slice(0,3).map((item) => (
                     <RentSingle key={item.id} rentHouse={item}/>
                 ))}
             </FeaturedApartments>
