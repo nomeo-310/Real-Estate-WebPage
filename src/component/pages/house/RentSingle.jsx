@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss'
 
 const RentSingle = ({rentHouse: {image, name, type, status, rent, apartment_status, apartment_details}}) => {
   return (
@@ -20,7 +21,7 @@ const RentSingle = ({rentHouse: {image, name, type, status, rent, apartment_stat
               <h4>{apartment_status}</h4>
             </div>
         </div>
-        <h3>{name}</h3>
+        <h3 className='apartment-name'>{name}</h3>
         <ul className='apartment-details'>{apartment_details.map((detail, index) => (<li key={index}>{detail}</li>))}</ul>
       </div>
     </div>

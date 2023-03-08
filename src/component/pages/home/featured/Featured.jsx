@@ -10,6 +10,7 @@ import { rentData } from '../../../data/data';
 import InvestSingle from '../../house/InvestSingle';
 import BuySingle from '../../house/BuySingle';
 import RentSingle from '../../house/RentSingle';
+import FunFacts from './FunFacts';
 
 const Featured = () => {
     const houseData = [
@@ -52,7 +53,7 @@ const Featured = () => {
                 ))}
             </div>
             <h2 className="head-title">Making Real Estate Investment Accessible to all</h2>
-            <h3 className='subtitle '>How it works</h3>
+            <h3 className='subtitle'>How it works</h3>
             <div className="compare">
                 {compareData.map((data) => (
                     <CompareCard key={data.id} cardDetail={data}/>
@@ -74,6 +75,7 @@ const Featured = () => {
                     <RentSingle key={item.id} rentHouse={item}/>
                 ))}
             </FeaturedApartments>
+            <FunFacts/>
         </div>
     </div>
   )

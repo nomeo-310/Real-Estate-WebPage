@@ -52,7 +52,7 @@ useEffect(() => {
       <div className={`nav-wrapper ${navWrap}`}>
         <div className="nav-left">
           <div className="brand-name">
-            <h2><Link to="/" className="link">nomeo realtors</Link></h2>
+            <h2 onClick={closeMenu}><Link to="/" className="link">nomeo realtors</Link></h2>
           </div>
           <div className="hamburger-wrapper">
             <div className={`hamburger-menu ${hamburgerClass}`} onClick={toggleMenu}></div>

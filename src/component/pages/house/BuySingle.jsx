@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss'
 
 const BuySingle = ({buyHouse: {image, name, type, status, down_payment, apartment_status, price, rent, returns, appreciation, apartment_details}}) => {
   return (

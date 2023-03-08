@@ -1,0 +1,128 @@
+.single-house {
+    flex: 1;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.25);
+    .image {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: cover;
+            &:hover {
+                -webkit-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                transform: scale(1.1);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    .status {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: flex;
+        gap: 20px;
+        span {
+            background: #64318a;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 35px;
+            font-size: 15px;
+        }
+    }
+    .house-details {
+        padding: 10px;
+        .payment_status {
+            display: flex;
+            justify-content: space-between;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+            .payment {
+                h4 {
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+                h3 {
+                    font-size: 20px;
+                    span:not(span.mdi) {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .apartment-status {
+                h4 {
+                    font-weight: 300;
+                    font-size: 15px;
+                    padding: 5px 12px;
+                    border-radius: 25px;
+                    background: #e81123;
+                    color: #fff;
+                }
+            }
+            .apartment-status.buy {
+                h4 {
+                    background: #298760;
+                }
+            }
+            .apartment-status.available {
+                h4 {
+                    background: #298760;
+                }
+            }
+        }
+        .shares {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            h3 {
+                font-size: 16px;
+            }
+            span {
+                font-size: 15px;
+            }
+        }
+        .property-price {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 5px;
+            span {
+                font-weight: 600;
+            }
+        }
+        .apartment-name {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .apartment-details {
+            margin-bottom: 5px;
+            li {
+                display: inline-block;
+                margin-right: 5px;
+                &:not(:last-child)::after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                    background: #000;
+                    margin: 0 8px;
+                    vertical-align: middle;
+                }
+            }
+        }
+        .footer {
+            li {
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
