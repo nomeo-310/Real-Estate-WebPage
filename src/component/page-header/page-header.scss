@@ -1,6 +1,6 @@
 .page-header {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -8,8 +8,8 @@
     align-items: center;
     padding: 0 100px;
     .page-header-content {
-        margin-top: 90px;
-        width: 40%;
+        margin-top: 15%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -18,7 +18,7 @@
             color: #fff;
             .main_title {
                 font-size: 40px;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
             }
             .sub_title {
                 font-size: 20px;
@@ -28,7 +28,7 @@
         .page-header-search-bar {
             height: 50px;
             position: relative;
-            width: 85%;
+            width: 75%;
             cursor: pointer;
             input {
                 width: 100%;
@@ -65,7 +65,7 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 50%;
-                background: #b57fdf;
+                background: #40a6c2;
                 .mdi-magnify {
                     color: #fff;
                 }
@@ -81,7 +81,35 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 85vh;
+        height: 100vh;
         background: rgba(0,0,0,0.3);
+    }
+}
+@media (max-width:600px) {
+    .page-header {
+        padding: 0 80px;
+        height: 70vh;
+        .page-header-content {
+            margin-top: 35%;
+            width: 100%;
+            .page-header-text {
+                .main_title {
+                    font-size: 35px;
+                }
+                .sub_title {
+                    font-size: 18px;
+                    margin-bottom: 80px;
+                }
+            }
+            .page-header-search-bar {
+                width: 100%;
+                input {
+                    font-size: 14px;
+                }
+            }
+        }
+        .overlay {
+            height: 70vh;
+        }
     }
 }

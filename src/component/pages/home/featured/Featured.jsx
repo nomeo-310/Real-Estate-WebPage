@@ -11,6 +11,7 @@ import InvestSingle from '../../house/InvestSingle';
 import BuySingle from '../../house/BuySingle';
 import RentSingle from '../../house/RentSingle';
 import FunFacts from './FunFacts';
+import FAQ from './FAQ';
 
 const Featured = () => {
     const houseData = [
@@ -59,6 +60,7 @@ const Featured = () => {
                     <CompareCard key={data.id} cardDetail={data}/>
                 ))}
             </div>
+            <FAQ color='#64318a'/>
             <h2 className="head-title">Featured Apartments</h2>
             <FeaturedApartments featureApartment={co_Own}>
                 {investmentData.slice(0,3).map((item) => (
