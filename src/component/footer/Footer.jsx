@@ -48,7 +48,7 @@ const Footer = () => {
                 <h2>{data.title}</h2>
                 <ul className="footer-links">
                   {data.subtitles.map((subtitle, index) => (
-                    <li key={index}><a href="#!">{subtitle}</a></li>
+                    <li key={index}><Link href="#!">{subtitle}</Link></li>
                   ))}
                 </ul>
               </div>

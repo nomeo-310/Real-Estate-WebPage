@@ -1,12 +1,6 @@
 import React from 'react'
 import './rent.scss'
 import PageHeader from '../../page-header/PageHeader'
-import rentBanner from '../../images/rentBanner.jpg'
-import rentSideImage from '../../images/rentSideImage.jpg'
-import leftImage from '../../images/leftImage.jpg'
-import bottomImage from '../../images/bottomImage.jpg'
-import topLeftImage from '../../images/topLeftImage.jpg'
-import topRightImage from '../../images/topRightImage.jpg'
 import { Link } from 'react-router-dom'
 import Tab from '../../tab/Tab'
 import FAQ from '../home/featured/FAQ'
@@ -16,6 +10,16 @@ const Rent = () => {
     const rentData = {
         main_title: 'Do you want to pay your rent monthly?',
         sub_title: 'Renting does not have to be hard, enjoy the ease that comes with monthly plan'
+    }
+
+    const rentImages = {
+        rentBanner: require('../../images/rentBanner.jpg'),
+        rentSideImage: require('../../images/rentSideImage.jpg'),
+        leftImage: require('../../images/leftImage.jpg'),
+        bottomImage: require('../../images/bottomImage.jpg'),
+        topLeftImage: require('../../images/topLeftImage.jpg'),
+        topRightImage: require('../../images/topRightImage.jpg'),
+
     }
 
     const rentContentData = [
@@ -90,7 +94,7 @@ const Rent = () => {
     <div className='rent'>
       <PageHeader 
         showSearch={true} 
-        image={rentBanner}
+        image={rentImages.rentBanner}
         main_title={rentData.main_title}
         sub_title={rentData.sub_title} 
         />
@@ -102,7 +106,7 @@ const Rent = () => {
                 </div>
                 <div className="rent-feature-content">
                     <div className="content-image">
-                        <img src={rentSideImage} alt="side_image"/>
+                        <img src={rentImages.rentSideImage} alt="side_image"/>
                     </div>
                     <div className="content-text">
                         {rentContentData.map((data) => (
@@ -158,7 +162,7 @@ const Rent = () => {
                 <div className="rent-explore">
                     <Link to='/verified-homes' className='explore-link'>
                         <div className="rent-explore-left">
-                            <img src={leftImage} alt=""/>
+                            <img src={rentImages.leftImage} alt=""/>
                             <div className="overlay"></div>
                             <div className="text">
                                 <h3 className='large'>Verified Homes</h3>
@@ -170,7 +174,7 @@ const Rent = () => {
                         <div className="rent-explore-right-top">
                             <Link to='/premium-homes' className='explore-link'>
                                 <div className="top-left">
-                                    <img src={topLeftImage} alt=""/>
+                                    <img src={rentImages.topLeftImage} alt=""/>
                                     <div className="text">
                                         <h3>Premium Homes</h3>
                                         <h4>10 homes</h4>
@@ -180,7 +184,7 @@ const Rent = () => {
                             </Link>
                             <Link to='/bedspaces' className='explore-link'>
                                 <div className="top-right">
-                                    <img src={topRightImage} alt=""/>
+                                    <img src={rentImages.topRightImage} alt=""/>
                                     <div className="overlay"></div>
                                     <div className="text">
                                         <h3>Bedspaces</h3>
@@ -191,7 +195,7 @@ const Rent = () => {
                         </div>
                         <Link to='/shared-homes' className='explore-link'>
                             <div className="rent-explore-right-bottom">
-                                <img src={bottomImage} alt=""/>
+                                <img src={rentImages.bottomImage} alt=""/>
                                 <div className="overlay"></div>
                                 <div className="text">
                                     <h3>Shared Homes</h3>

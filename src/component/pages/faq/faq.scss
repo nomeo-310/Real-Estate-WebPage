@@ -1,0 +1,110 @@
+.faq {
+    .page-header {
+        height: 75vh;
+        background-position: 50% 80%;
+        .overlay {
+            height: 75vh;
+        }
+    }
+    .faq-wrapper {
+        margin: 50px 0 60px 0;
+        text-align: center;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: 300;
+        }
+    }
+    .faq-list {
+        margin: 50px 150px;
+        .faq-item {
+            margin-bottom: 24px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #eaf9ff;
+            .faq-item-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                span {
+                    font-size: 30px;
+                }
+                h3 {
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+            }
+            .faq-item-bottom {
+                height: 0;
+                overflow: hidden;
+                transition: height ease 0.2s;
+                margin-top: 15px;
+                white-space: pre-wrap;
+                h4 {
+                    font-size: 19px;
+                    font-weight: 300;
+                }
+            }
+            .faq-item-bottom.open {
+                height: auto;
+                
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .faq-item.active {
+            background: #378da9;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .faq {
+        .page-header {
+            height: 60vh;
+            background-position: 50% 80%;
+            .overlay {
+                height: 60vh;
+            }
+        }
+        .faq-wrapper {
+            margin: 30px 0 40px 0;
+            text-align: center;
+            h2 {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            h3 {
+                font-size: 17px;
+            }
+        }
+        .faq-list {
+            margin: 40px 0;
+            .faq-item {
+                margin-bottom: 20px;
+                padding: 15px;
+                .faq-item-top {
+                    span {
+                        font-size: 20px;
+                    }
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+                .faq-item-bottom {
+                    h4 {
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    
+}
